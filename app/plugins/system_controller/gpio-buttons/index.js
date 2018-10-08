@@ -5,7 +5,7 @@ var fs = require('fs-extra');
 var Gpio = require('onoff').Gpio;
 var io = require('socket.io-client');
 var socket = io.connect('http://localhost:3000');
-var actions = ["playPause", "volumeUp", "volumeDown", "previous", "next", "shutdown","playRadio"];
+var actions = ["playPause", "volumeUp", "volumeDown", "previous", "next", "shutdown","playRadio1","playAktual"];
 
 module.exports = GPIOButtons;
 
@@ -273,7 +273,13 @@ GPIOButtons.prototype.shutdown = function() {
 };
 
 //playRadio from Playlist RADIO
-GPIOButtons.prototype.playRadio = function() {
+GPIOButtons.prototype.playRadio1 = function() {
   //this.logger.info('GPIO-Buttons: playRadio-button pressed');
-  socket.emit('playPlaylist', {"name": "WebRadio"});
+  socket.emit('playPlaylist', {"name": "WebRadio1"});
+};
+
+//playRadio from Playlist RADIO
+GPIOButtons.prototype.playAktual = function() {
+  //this.logger.info('GPIO-Buttons: playRadio-button pressed');
+  socket.emit('playPlaylist', {"name": "playAktual"});
 };
