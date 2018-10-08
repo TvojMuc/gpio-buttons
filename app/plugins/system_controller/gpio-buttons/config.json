@@ -29,9 +29,14 @@
     "pin": {"value": 3,"type":"number"},
     "value": {"value": 0, "type": "number"}
   },
-  "playRadio":{
+  "playRadio1":{
     "enabled": {"value": false, "type": "boolean"},
     "pin": {"value": 13,"type":"number"},
+    "value": {"value": 0, "type": "number"}
+  },
+  "playAktual":{
+    "enabled": {"value": false, "type": "boolean"},
+    "pin": {"value": 19,"type":"number"},
     "value": {"value": 0, "type": "number"}
   }
 }
